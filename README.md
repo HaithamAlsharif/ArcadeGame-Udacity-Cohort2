@@ -1,20 +1,5 @@
-# Classic Arcade Game Clone Project
-
-## Table of Contents
-
-- [Instructions](#instructions)
-- [Contributing](#contributing)
-
-## Instructions
-
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
-
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
-
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+The way the game works is as the following:
+1. The player starts with 0 points in the bottom center of the canvas.
+2. if the player reaches the water (top end of the canvas), the player gains a point.
+3. if the player hits one of the enemies the counter resets to 0.
+4. When the player reaches 10 points, the player wins :D
