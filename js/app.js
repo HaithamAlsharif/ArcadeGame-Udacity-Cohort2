@@ -60,7 +60,7 @@ let allEnemies = [enemy1,enemy2,enemy3];
 let player = new Player();
 
 Player.prototype.handleInput = function(key){
-        if(key == 'left' && this.x > 0 ){
+        if(key == 'left' && this.x > 2 ){
             this.x = this.x - 100;
         }
 
@@ -85,8 +85,8 @@ Player.prototype.update = function(){
         this.reset();
         winCounter.innerHTML++;
         // console.log(winCounter);
-        if(winCounter.innerHTML == 10){
-            win();
+        if(winCounter.innerHTML == 3){
+            this.win();
         }
     }
 }
@@ -96,16 +96,12 @@ Player.prototype.reset = function(){
     this.y = canvasHeight/2 ;
 }
 
-let win = function(){
+Player.prototype.win = function(){
     setTimeout(function(){
         alert("You won !");
-        reset();
+        player.reset();
+        winCounter.innerHTML = 0;
     },0)
-}
-
-let reset = function(){
-    player.reset();
-    winCounter.innerHTML = 0;
 }
 
 Player.prototype.render = function(){
